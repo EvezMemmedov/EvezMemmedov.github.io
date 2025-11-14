@@ -1,19 +1,22 @@
+/* ===== HEADER ===== */
 .header {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* categories aşağı düşsün */
     background: white;
     width: 100%;
     padding: 20px 40px;
     box-sizing: border-box;
 }
 
+/* ===== TOP ROW ===== */
 .top-row {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start; /* logo solda, right-row sağda */
     align-items: center;
     width: 100%;
 }
 
+/* ===== RIGHT ROW ===== */
 .right-row {
     display: flex;
     align-items: center;
@@ -21,11 +24,18 @@
     margin-left: 60px;
 }
 
+/* ===== LOGO ===== */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-right: 20px; /* logo ilə search arasındakı məsafə */
+}
+
 /* ===== SEARCH ===== */
 .search {
     display: flex;
     align-items: center;
-    gap: 0;
 }
 
 .search input {
@@ -50,6 +60,7 @@
     height: 16px;
 }
 
+/* ===== ICONS ===== */
 .icons {
     display: flex;
     align-items: center;
@@ -74,29 +85,27 @@
     margin-top: 4px;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: black;
-}
-
+/* ===== CATEGORIES ===== */
 .categorys {
-    display: flex;
-    gap: 20px;
     margin-top: 10px;
-    flex-wrap: wrap;
     width: 100%;
 }
 
-.categorys a {
-    color: black;
-    text-decoration: none;
-    font-size: 14px;
-    padding: 4px 6px;
-    transition: all 0.2s;
+#categories {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.categorys a:hover {
+#categories li {
+    font-size: 14px;
+    padding: 4px 6px;
+}
+
+#categories li:hover {
     text-decoration: underline;
     color: #333;
 }
